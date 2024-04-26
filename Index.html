@@ -10,7 +10,13 @@
     font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
+
+    background-image: url('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR76qcl9lpQbx-chr6YCinrqO6mmIkuF5ewwg&s');
+    background-size: cover;
+    background-position: center;
+
   }
+
 
   @font-face {
     font-family: myCustomFONT;
@@ -18,31 +24,27 @@
   }
 
   .topnav {
-    background-color: #333;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
     overflow: hidden;
+    display: flex;
+    justify-content: right;
+    padding: 10px;
+
   }
 
-  /* Style the links inside the navigation bar */
+
   .topnav a {
     float: left;
-    color: #f2f2f2;
-    text-align: center;
+    color: #e6970e;
     padding: 14px 16px;
     text-decoration: none;
     font-size: 17px;
   }
 
-  /* Change the color of links on hover */
-  .topnav a:hover {
-    background-color: #ddd;
-    color: black;
-  }
 
-  /* Add a color to the active/current link */
-  .topnav a.active {
-    background-color: #04AA6D;
-    color: white;
-  }
 
   .first {
     display: flex;
@@ -67,7 +69,7 @@
     padding: 3%;
     margin-left: 5%;
     margin-right: 5%;
-    background-color: rgb(100, 237, 141);
+
 
     .para {
       font-size: medium;
@@ -106,13 +108,15 @@
   }
 
   footer {
-    background-color: #333;
-    color: #fff;
+    background-color: #faf7f7;
+    color: #220c0c;
     text-align: center;
     padding: 10px 0;
     position: fixed;
     bottom: 0;
     width: 100%;
+    margin-top: 4%;
+
   }
 
   header {
@@ -185,9 +189,7 @@
     padding: 20px 0;
   }
 
-  main {
-    padding: 20px;
-  }
+
 
   .about-me {
     display: flex;
@@ -228,16 +230,18 @@
     color: #fff;
     text-align: center;
     padding: 20px 0;
+    margin-left: 5%;
+    margin-right: 5%;
   }
 
-  main {
-    padding: 20px;
-  }
+
 
   .skills-list {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-around;
+    margin-left: 5%;
+    margin-right: 5%;
   }
 
   .skill {
@@ -301,26 +305,92 @@
   .contact-info p {
     font-weight: bold;
   }
+
+  .contact-section {
+    margin-bottom: 4%;
+  }
+
+  .instagram-section {
+    text-align: center;
+    margin-top: 50px;
+  }
+
+  .instagram-icon img {
+    width: 100px;
+    /* Adjust icon size as needed */
+  }
+
+  .instagram-link a {
+    display: inline-block;
+    margin-top: 20px;
+    padding: 10px 20px;
+    background-color: #405DE6;
+    /* Instagram brand color */
+    color: #fff;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+  }
+
+  .fa {
+    padding: 20px;
+    font-size: 30px;
+    width: 50px;
+    text-align: center;
+    text-decoration: none;
+    margin: 5px 2px;
+  }
+
+  .fa-instagram {
+    background: #125688;
+    color: white;
+  }
+
+  .fa-twitter {
+    background: #55ACEE;
+    color: white;
+  }
+
+  .portfolio {
+  
+    color: #150e02;
+    background-image: url(https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQO6VNSBMBvK-suTnAUWjyODqJNbOdXOEMcbA&s);
+    background-size: cover;
+    background-position: center;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #fff;
+    font-family: Arial, sans-serif;
+    text-align: center
+  }
 </style>
 
 <body>
-  <div style="border-radius: 20px; background-color: aqua; aling padding: 20px; margin: bottom 8%;">
-    <header>
 
-      PERSONAL PORTFOLIO
-    </header>
-    <div class="topnav">
-      <a class="active" href="#home">Home</a>
-      <a href="">Link</a>
-      <a href="t">Contact</a>
-      <a href="">About</a>
+
+  <nav>
+    <div class="portfolio">
+      <h1> PERSONAL PORTFOLIO</h1>
+
     </div>
+    <div class="topnav">
+      <a href="#first">Home</a>
+      <a href="#about">About</a>
+      <a href="#my-skill">Skills</a>
+      <a href="#my-project">My Projects</a>
+      <a href="#contact-us">Contact us</a>
+    </div>
+
+  </nav>
+
 
 
 
   </div>
 
-  <div class="first" style="
+  <div id="first" class="first" style="
         
       ">
     <h1 id="intro" ; style="padding-top: 9%">I am a Web Developer</h1>
@@ -329,10 +399,11 @@
       height="300vw" width="200vw" style="border-radius: 15%" />
   </div>
   <hr />
-
-  <header>
-    <h1>About Me</h1>
-  </header>
+  <div id="about" class="about">
+    <header>
+      <h1>About Me</h1>
+    </header>
+  </div>
   <main>
     <section class="about-me">
       <div class="profile-pic">
@@ -345,9 +416,11 @@
     </section>
   </main>
 
-  <header>
-    <h1>My Skills</h1>
-  </header>
+  <div id="my-skill" class="my-skill">
+    <header>
+      <h1>My Skills</h1>
+    </header>
+  </div>
   <main>
     <section class="skills-list">
       <div class="skill">
@@ -378,10 +451,11 @@
     </section>
   </main>
 
-
-  <header>
-    <h1>My Projects</h1>
-  </header>
+  <div id="my-project" class="my-project">
+    <header>
+      <h1>My Projects</h1>
+    </header>
+  </div>
   <main>
     <section class="project">
       <h2>Project : Dynamic Website</h2>
@@ -425,50 +499,51 @@
     </section>
   </main>
 
+  <div id="contact-us" class="contact-us">
+    <header>
 
-  <header>
-
-    <h1 ">Contact Us</h1>
+      <h1 ">Contact Us</h1>
  
 
-</header>
+  </header>
+  </div>
 
   <div style=" display: flex; justify-content:space-evenly;">
-      <main>
-        <section class="contact-form">
-          <h2>Send us a message</h2>
-          <form action="#" method="post">
-            <div class="form-group">
-              <label for="name">Your Name:</label>
-              <input type="text" id="name" name="name" required>
-            </div>
-            <div class="form-group">
-              <label for="email">Your Email:</label>
-              <input type="email" id="email" name="email" required>
-            </div>
-            <div class="form-group">
-              <label for="message">Message:</label>
-              <textarea id="message" name="message" rows="5" required></textarea>
-            </div>
-            <button type="submit">Send Message</button>
-          </form>
-        </section>
-      </main>
-      </div>
+        <main>
+          <section class="contact-form">
+            <h2>Send us a message</h2>
+            <form action="#" method="post">
+              <div class="form-group">
+                <label for="name">Your Name:</label>
+                <input type="text" id="name" name="name" required>
+              </div>
+              <div class="form-group">
+                <label for="email">Your Email:</label>
+                <input type="email" id="email" name="email" required>
+              </div>
+              <div class="form-group">
+                <label for="message">Message:</label>
+                <textarea id="message" name="message" rows="5" required></textarea>
+              </div>
+              <button type="submit">Send Message</button>
+            </form>
+          </section>
+        </main>
+  </div>
 
 
-      <section class="contact-section">
-        <div class="social-links" style="display: flex; justify-content: space-evenly;">
-          <h2>Follow Us:</h2>
 
 
-          <ul>
-            <a href="https://facebook.com">Facebook</a>
-            <a href="https://twitter.com">Twitter</a>
-            <a href="https://instagram.com">Instagram</a>
-          </ul>
-        </div>
+  <h2>Follow Us:</h2>
 
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <a href="#" class="fa fa-instagram"></a>
+  <a href="#" class="fa fa-twitter"></a>
+
+
+  <footer class="footer">
+    <p>&copy; 2024 Your Website. All Rights Reserved.</p>
+  </footer>
 
 </body>
 
